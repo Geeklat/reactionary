@@ -1,0 +1,223 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.background-container {
+  overflow: hidden;
+}
+
+.background-container::-webkit-scrollbar {
+  display: none;
+}
+
+.background::-webkit-scrollbar {
+  display: none;
+}
+
+
+.background {
+  width: 7680px;
+  height: 100%;
+  background: url(https://img.itch.zone/aW1hZ2UvMTIxNjU4LzU2MDQxMC5wbmc=/original/hCUwLQ.png) repeat;  
+  background-size: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  animation: bg-abs-scroll 20s linear infinite;
+}
+
+.menu {
+  box-shadow: 0 0 0 1px #c8e0e0,
+    0 0 0 2px #808080,
+    0 0 0 3px #283030,
+    inset 0 0 0 1px #303088;
+  border: 5px solid white; 
+  border-radius: 25px; 
+  background-color: darkblue;
+  background-image: linear-gradient(to bottom right,rgb(0, 0, 231), darkblue);  
+}
+
+.mainMenu {
+  height: 850px;   
+  margin: 20px;   
+  position: relative;
+}
+
+.font {
+  font-size: 34px;
+}
+
+.leftContent {
+  float: left;
+}
+
+.rightContent {
+  float: right;
+}
+
+.contentHeader{
+  color: white; 
+  font-family: sans-serif; 
+  letter-spacing: 5px;  
+  font-size: 30px;
+  text-shadow: 3px 3px rgb(14, 13, 114);
+}
+
+.contentBody {
+  color: white; 
+  font-family: sans-serif; 
+  letter-spacing: 5px;  
+  font-size: 20px;
+  text-shadow: 3px 3px rgb(14, 13, 114);
+}
+
+.contentBody #li {
+  margin-bottom: 15px;
+}
+
+.contentSpacer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.selectionMenu {
+  height: 500px;
+  width: 300px;  
+  margin: 10px; 
+  padding-left: 30px;  
+}
+
+.contactMenu {
+  height: 300px;
+  width: 300px;
+  margin: 10px;
+  padding-left: 30px;  
+}
+
+.contactHeader {
+  color: white; 
+  font-family: sans-serif; 
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+}
+
+.menuHeader{
+  color: white; 
+  font-family: sans-serif; 
+  letter-spacing: 5px;
+  float: left;
+  text-shadow: 3px 3px rgb(14, 13, 114);
+}
+
+.menuSelection:hover{
+  animation: floating 2s linear infinite;  
+}
+
+.contentMenu {
+  height: 820px;
+  width: 1225px;
+  margin: 10px;
+  padding-left: 30px;  
+  overflow: scroll;
+}
+
+.arrow {
+  padding-top: 10px;
+}
+
+.menuSelection .arrow {
+  display:none;  
+}
+
+.menuSelection:hover .arrow {
+  display:inline;
+}
+
+.menuSelection {
+  width: 100%;
+  float: left;
+}
+
+.container {
+  width: 500px;
+  height: 300px;
+  position: relative; 
+}
+
+.contactLeft {
+  float: left;
+}
+
+.portraitRight {
+  float: right;
+  margin: 15px;
+}
+
+.mainCharacter {
+  height: 200px;
+}
+
+.float {
+  animation: floating 2s linear infinite;
+  margin: 3.5rem auto;
+  padding: 1rem;    
+  box-shadow: -20px -17px 8px 0px rgb(11, 11, 167);
+}
+@keyframes floating {
+  0% {
+      transform: translate(0%, 5%);
+  }
+  50% {
+      transform: translate(0%, -5%);
+  }
+  100% {
+      transform: translate(0%, 5%);
+  }
+}
+
+@keyframes bg-abs-scroll {
+  from { transform: translate(0); }
+  to { transform: translate(-3840px); }
+}
+
+
