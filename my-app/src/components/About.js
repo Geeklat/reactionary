@@ -2,15 +2,15 @@
 
 import React from 'react';
 
-function About(props) {
+function About() {
   return (
     <div className="contentHeader">
         <h1>About:</h1>        
         <ul className='contentBody'>
           <li className='contentSpacer'>
-            <ul>Who Am I?
+            <ul>
+              <strong>Who Am I:</strong>
               <li>Non-binary (they/them)</li>
-              <li>Bisexual</li>
               <li>Neurodivergent</li>
               <li>Born in '84</li>
               <li>Loves to help others</li>
@@ -18,7 +18,8 @@ function About(props) {
             </ul>
           </li>
           <li className='contentSpacer'>
-            <ul>Hobbies
+            <ul>
+              <strong>Hobbies:</strong>
               <li>Video Games, their historical preservation, and overall impact on society as a whole</li>
               <li>Streaming Live Playthroughs of video games on Twitch</li>
               <li>Studying and learning all sort of new facts about anything</li>
@@ -28,14 +29,16 @@ function About(props) {
             </ul>
           </li>
           <li className='contentSpacer'>
-            <ul>Why Software and Front End?
+            <ul>
+              <strong>Why Software and Front End:</strong>
               <li>I started out in game design and it wasn't really hitting the needs that I had</li>
               <li>I went back to school for a bachelor's of Computer Science and Computer security</li>
               <li>I like utilizing my passion for visual elements, creativity, and social engineering and applying them to the problem solving of developing a user interface</li>
             </ul>
           </li>
           <li className='contentSpacer'>
-            <ul>Family
+            <ul>
+              <strong>Family:</strong>
               <li>Single Father w/ Two Kids</li>
               <li>6 year old boy - Elric</li>
               <li>7 year old girl - Ripley</li>

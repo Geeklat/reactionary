@@ -8,23 +8,26 @@ import { useState } from 'react';
 
 
 function App() {
-  const [contentMenu, setContentMenu] = useState('');
+  const [contentMenu, setContentMenu] = useState('projects');
 
-  const CONTENT_STATES = {
+  const CONTENT_COMPONENTS = {
     projects: <Projects />,
     about: <About />,
-    gitHub: <GitHub />,
+    github: <GitHub />,
     skills: <Skills />
+  };
+
+  function handleContentMenuChange(menuItem) {
+    setContentMenu(menuItem.toLowerCase());    
   }
 
-  function handleContentMenuChange(e) {
-    setContentMenu(e);    
-  }
+  const arrSideMenu = ["Projects", "About", "GitHub", "Skills"];
 
-  function ContentState({state}) {
+  function SideMenu({ name }) {
     return (
-      <div>
-        {CONTENT_STATES[state]}
+      <div className="menuSelection">
+        <h1 className="arrow menuHeader material-symbols-outlined">navigate_next</h1>
+        <h1 className="menuHeader" onClick={() => handleContentMenuChange(name)}>{name}</h1>
       </div>
     );
   }
@@ -39,29 +42,16 @@ function App() {
       <div className="menu mainMenu">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />        
         <div className="leftContent">
-          <div className="menu selectionMenu">        
-            <div className="menuSelection">
-              <h1 className="arrow menuHeader material-symbols-outlined">navigate_next</h1>          
-              <h1 className="menuHeader" onClick={ () => handleContentMenuChange('projects')}>Projects</h1>
-            </div>
-            <div className="menuSelection">
-              <h1 className="arrow menuHeader material-symbols-outlined">navigate_next</h1>                      
-              <h1 className="menuHeader" onClick={ () => handleContentMenuChange('about')}>About Me</h1>
-            </div>          
-            <div className="menuSelection">
-              <h1 className="arrow menuHeader material-symbols-outlined">navigate_next</h1>                      
-              <h1 className="menuHeader" onClick={ () => handleContentMenuChange('gitHub')}>GitHub</h1>
-            </div>          
-            <div className="menuSelection">
-              <h1 className="arrow menuHeader material-symbols-outlined">navigate_next</h1>                      
-              <h1 className="menuHeader" onClick={ () => handleContentMenuChange('skills')}>Skills</h1>
-            </div>          
+          <div className="menu selectionMenu">
+            {arrSideMenu.map((menuName) => (
+              <SideMenu key={menuName} name={menuName} />
+            ))}
           </div>
           <div className="container menu contactMenu">
             <div className="contactLeft">
               <div className="contactHeader">Justin Green</div>
               <a className="contactHeader" href="mailto:greenisjustin@gmail.com">E-Mail</a>          
-              <br></br>
+              <br />
               <a  href="https://www.linkedin.com/in/greenisjustin/"><i className="fa fa-linkedin-square" style={{ fontSize: '34px', color: 'white', marginTop: '20px' }}></i></a>
             </div>
             <div className="portraitRight">
@@ -71,7 +61,7 @@ function App() {
         </div>
         <div className='rightContent'>          
           <div className="menu contentMenu">
-            <ContentState state={contentMenu}></ContentState>
+            {CONTENT_COMPONENTS[contentMenu]}
           </div>
           
         </div>  
