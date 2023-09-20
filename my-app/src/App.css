@@ -75,6 +75,9 @@
 }
 
 .mainMenu {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
   height: 850px;   
   margin: 20px;   
   position: relative;
@@ -85,11 +88,14 @@
 }
 
 .leftContent {
-  float: left;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .rightContent {
   float: right;
+  width: 100%;
 }
 
 .contentHeader{
@@ -115,6 +121,12 @@
 .contentSpacer {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.skillsBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .selectionMenu {
@@ -155,7 +167,7 @@
 
 .contentMenu {
   height: 820px;
-  width: 1225px;
+  --width: 1225px;
   margin: 10px;
   padding-left: 30px;  
   overflow: scroll;
@@ -179,7 +191,7 @@
 }
 
 .container {
-  width: 500px;
+  --width: 500px;
   height: 300px;
   position: relative; 
 }
@@ -190,7 +202,8 @@
 
 .portraitRight {
   float: right;
-  margin: 15px;
+  margin: 90px 140px;
+  position: absolute;
 }
 
 .mainCharacter {

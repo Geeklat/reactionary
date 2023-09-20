@@ -1,20 +1,34 @@
 // src/components/GitHub.js
 
 import React from 'react';
+import { useEffect, useState } from 'react';
 
-function GitHub(props) {
+function GitHub() {
+  const [githubData, setGitHubData] = useState([]);
+ 
+  const fetchData = () => {
+    return fetch(`https://api.github.com/users/Geeklat/repos`)
+      .then((response) => response.json())
+      .then((data) => setGitHubData(data));
+  }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  const GITHUBREPOS = githubData;
+
   return (
-    <div>
-        <div className="contentHeader"><h1>GitHub</h1>
-          <ul className="contentBody">
-              <li>
-                <div>
-                  <h1><a href="https://github.com/Geeklat/reactionary">Reactionary</a></h1>
-                  <div>- This site you're on. An experiment in learning React and trying a bunch of different things.</div>
-                </div>
-              </li>            
-          </ul>
-        </div>        
+    <div className='contentHeader'>      
+      <h1>GitHub Repos</h1>
+      <ul className='contentBody'>
+        {GITHUBREPOS.map((repos, index) => (
+          <div key={index} className='contentSpacer'>
+            <h1><a href={repos.html_url}>{repos.name}</a></h1>
+            <div className='contentHeader'>{repos.description}</div>            
+          </div>
+        ))}
+      </ul>        
     </div>
   );
 }

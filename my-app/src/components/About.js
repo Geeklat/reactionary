@@ -10,22 +10,11 @@ function About() {
           <li className='contentSpacer'>
             <ul>
               <strong>Who Am I:</strong>
-              <li>Non-binary (they/them)</li>
+              <li>Pronouns: (they/them)</li>
               <li>Neurodivergent</li>
               <li>Born in '84</li>
               <li>Loves to help others</li>
-              <li>Infinite wealth of facts about any topic imaginable due to overwhelming number of special interests</li>
-            </ul>
-          </li>
-          <li className='contentSpacer'>
-            <ul>
-              <strong>Hobbies:</strong>
-              <li>Video Games, their historical preservation, and overall impact on society as a whole</li>
-              <li>Streaming Live Playthroughs of video games on Twitch</li>
-              <li>Studying and learning all sort of new facts about anything</li>
-              <li>Any and all things Horror</li>
-              <li>Dungeons and Dragons</li>
-              <li>Going on long walks with no intended journey</li>
+              <li>Infinite wealth of facts about any topic imaginable due to an overwhelming number of special interests</li>
             </ul>
           </li>
           <li className='contentSpacer'>
@@ -34,6 +23,17 @@ function About() {
               <li>I started out in game design and it wasn't really hitting the needs that I had</li>
               <li>I went back to school for a bachelor's of Computer Science and Computer security</li>
               <li>I like utilizing my passion for visual elements, creativity, and social engineering and applying them to the problem solving of developing a user interface</li>
+            </ul>
+          </li>
+          <li className='contentSpacer'>
+            <ul>
+              <strong>Hobbies:</strong>
+              <li>Video Games, their historical preservation, and overall impact on society as a whole</li>
+              <li>Streaming video games on Twitch</li>
+              <li>Studying</li>
+              <li>Any and all things Horror</li>
+              <li>Dungeons and Dragons</li>
+              <li>Going on long walks with no intended journey</li>
             </ul>
           </li>
           <li className='contentSpacer'>
